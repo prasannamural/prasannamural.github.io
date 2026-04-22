@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Prasanna Kumar S Mural</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="eyebrow">Publications</div>
+    <h1>Peer-reviewed articles, books &amp; book chapters.</h1>
+    <p class="subtitle">42 journal papers · 4 edited books · 1,051+ citations · h-index 18 · i10-index 29. Filter by year, theme, or quartile.</p>
+  </div>
+</header>
+
+<section class="reveal">
+  <div class="wrap">
+
+    <div class="pub-stats">
+      <div class="pub-stat"><span class="pub-stat-num">42</span><span class="pub-stat-label">Journal articles</span></div>
+      <div class="pub-stat"><span class="pub-stat-num">1,051</span><span class="pub-stat-label">Citations</span></div>
+      <div class="pub-stat"><span class="pub-stat-num">18</span><span class="pub-stat-label">h-index</span></div>
+      <div class="pub-stat"><span class="pub-stat-num">29</span><span class="pub-stat-label">i10-index</span></div>
+      <div class="pub-stat"><span class="pub-stat-num">4</span><span class="pub-stat-label">Edited books</span></div>
+    </div>
+
+    <div class="pub-nav">
+      <a href="#journal" class="active" data-tab="journal">Journal Articles</a>
+      <a href="#books" data-tab="books">Books &amp; Chapters</a>
+      <a href="#review" data-tab="review">Reviews</a>
+    </div>
+
+    <div id="tab-journal">
+      <div class="pub-controls">
+        <div class="pub-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="pubSearch" type="text" placeholder="Search title, author, journal, keyword…">
+        </div>
+        <select id="filterYear"><option value="">All years</option></select>
+        <select id="filterTheme">
+          <option value="">All themes</option>
+          <option value="energy">Energy Harvesting</option>
+          <option value="membrane">Membranes / Water</option>
+          <option value="composite">Composites / Smart Materials</option>
+          <option value="electrospin">Electrospinning</option>
+          <option value="ml">ML / Polymer Informatics</option>
+        </select>
+        <select id="filterQ">
+          <option value="">All quartiles</option>
+          <option value="Q1">Q1 only</option>
+          <option value="Q2">Q2 only</option>
+          <option value="Q3">Q3 only</option>
+        </select>
+      </div>
+      <div class="pub-result-count mono" id="resultCount">Showing 42 of 42 papers</div>
+      <div id="pubList"></div>
+      <div id="emptyState" style="display:none;padding:3rem 1rem;text-align:center;color:var(--mute);font-family:var(--f-mono);font-size:0.9rem;border:1px dashed var(--line-strong);border-radius:var(--r-md);">
+        No papers match your filters. <a href="#" onclick="clearFilters();return false;" style="color:var(--rust);border-bottom:1px solid var(--rust);">Clear filters</a>
+      </div>
+    </div>
+
+    <div id="tab-books" style="display:none;">
+      <div class="sub-heading">Books Edited · 4 volumes</div>
+      <div class="book-entry">
+        <div class="pub-num mono">B.04</div>
+        <div>
+          <div class="book-title"><em>Recent Technologies and Challenges in Water Remediation</em></div>
+          <div class="pub-authors">S. Shukla, S. Saxena, <strong>P. K. S. Mural</strong> (Eds.)</div>
+          <div class="book-details">Springer Nature · Topics in Mining, Metallurgy and Materials Engineering · Vol. 581 · 2025</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">B.03</div>
+        <div>
+          <div class="book-title"><em>Emerging Materials and Technologies in Water Remediation and Sensing</em></div>
+          <div class="pub-authors">S. Saxena, S. Shukla, <strong>P. K. S. Mural</strong> (Eds.)</div>
+          <div class="book-details">Springer Nature · Vol. 439 · 2023</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">B.02</div>
+        <div>
+          <div class="book-title"><em>Nano-Enabled Technologies for Water Remediation</em></div>
+          <div class="pub-authors">N. J. Kaleekkal, <strong>P. K. S. Mural</strong>, S. Vigneswaran (Eds.)</div>
+          <div class="book-details">Elsevier · 2022</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">B.01</div>
+        <div>
+          <div class="book-title"><em>Sustainable Technologies for Water and Wastewater Treatment</em></div>
+          <div class="pub-authors">N. J. Kaleekkal, <strong>P. K. S. Mural</strong>, S. Vigneswaran, U. Ghosh (Eds.)</div>
+          <div class="book-details">CRC Press · 2021</div>
+        </div>
+      </div>
+
+      <div class="sub-heading" style="margin-top:3rem;">Book Chapters · 10 entries</div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.10</div>
+        <div>
+          <div class="book-title">Piezoelectric Polymer Composites for Energy Harvesting</div>
+          <div class="pub-authors">A. R. Bhat, A. M. Chandran, <strong>P. K. S. Mural</strong></div>
+          <div class="book-details">In: <em>Electroactive Polymers</em> · pp. 125–158 · 2025</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.09</div>
+        <div>
+          <div class="book-title">Structural and Electrical Properties of Dielectric Polymers</div>
+          <div class="pub-authors">R. Nisthala, A. R. Bhat, <strong>P. K. S. Mural</strong></div>
+          <div class="book-details">In: <em>Electroactive Polymers</em> · pp. 39–58 · 2025</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.08</div>
+        <div>
+          <div class="book-title">Bioenergy Recovery from Industrial Wastewater</div>
+          <div class="pub-authors">V. Selvaraj, <strong>P. K. S. Mural</strong>; et al.</div>
+          <div class="book-details">2024</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.07</div>
+        <div>
+          <div class="book-title">Fabrication Methods of Fluoropolymer Nanocomposites</div>
+          <div class="pub-authors">A. M. Chandran; et al.</div>
+          <div class="book-details">In: <em>Advanced Fluoropolymer Nanocomposites</em>, Woodhead · pp. 121–153 · 2023</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.06</div>
+        <div>
+          <div class="book-title">Conductivity Studies of Fluoropolymer Nanocomposites</div>
+          <div class="pub-authors">A. M. Chandran; et al.</div>
+          <div class="book-details">In: <em>Advanced Fluoropolymer Nanocomposites</em>, Woodhead · pp. 181–211 · 2023</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.05</div>
+        <div>
+          <div class="book-title">MD Simulations of Fluoropolymer Nanocomposites</div>
+          <div class="pub-authors">S. Varun; et al.</div>
+          <div class="book-details">In: <em>Advanced Fluoropolymer Nanocomposites</em>, Woodhead · pp. 787–807 · 2023</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.04</div>
+        <div>
+          <div class="book-title">Biofouling Detection and Nano-Enabled Mitigation</div>
+          <div class="pub-authors">P. K. Samantaray, <strong>P. K. S. Mural</strong></div>
+          <div class="book-details">In: <em>Nano-Enabled Technologies</em>, Elsevier · pp. 39–69 · 2022</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.03</div>
+        <div>
+          <div class="book-title">Applications of Electrospun Membranes</div>
+          <div class="pub-authors">M. Aiswarya; et al.; <strong>P. K. S. Mural</strong></div>
+          <div class="book-details">CRC Press · pp. 89–112 · 2021</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.02</div>
+        <div>
+          <div class="book-title">Processing Nanocomposites Based on Commodity Polymers</div>
+          <div class="pub-authors"><strong>P. K. S. Mural</strong>, S. S. Ray</div>
+          <div class="book-details">Springer · pp. 1–25 · 2018</div>
+        </div>
+      </div>
+      <div class="book-entry">
+        <div class="pub-num mono">C.01</div>
+        <div>
+          <div class="book-title">Electrospun Polymer Nanocomposites</div>
+          <div class="pub-authors">K. Selatile, <strong>P. K. S. Mural</strong>, S. S. Ray</div>
+          <div class="book-details">Springer · pp. 199–229 · 2018</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-review" style="display:none;">
+      <p class="section-intro">Selected review articles and invited commentaries from the publication record.</p>
+      <div id="reviewList"></div>
+    </div>
+
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+const pubs = [
+  {n:42,y:2026,au:["N. Mridha","C. M. Nannapaneni","M. H. Shaikh","S. Pratihar","A. Yella","<strong>P. K. S. Mural</strong>"],t:"Photo-Assisted Energy Harvesters and Sensors Using PVDF Matrix-Stabilized α-FAPbI₃ Perovskite with AI/ML-Based Human Kinematic Detection",j:"ACS Applied Electronic Materials",jShort:"ACS Appl. Electron. Mater.",if:"4.5",q:"Q2",theme:["energy","ml"],doi:"10.1021/acsaelm.5c02533"},
+  {n:41,y:2026,au:["L. A. Devi","<strong>P. K. S. Mural</strong>","M. Aslam","P. Kumar"],t:"Understanding the Enhanced Piezoelectric Response in Inclined ZnO Nanorods",j:"Journal of Physics D: Applied Physics",jShort:"J. Phys. D: Appl. Phys.",if:"3.2",q:"Q2",theme:["energy"]},
+  {n:40,y:2026,au:["P. Sravandas","M. Garg","V. N. Sasi","S. Pratihar","<strong>P. K. S. Mural</strong>","A. M. Chandran"],t:"Halogen-Tuned BiOI-Cl Solid Solutions with Enhanced Built-In Electric Field for Superior Piezo-Photocatalytic Performance",j:"Langmuir",jShort:"Langmuir",if:"4.0",q:"Q1",theme:["energy"],doi:"10.1021/acs.langmuir.5c04845"},
+  {n:39,y:2026,au:["N. Mridha","M. Garg","S. Pratihar","K. Bulia","M. H. Shaikh","A. Yella","<strong>P. K. S. Mural</strong>"],t:"Enhanced Piezoelectric Performance of PAN Nanofibers with a Lead-Free High Entropy Perovskite Oxide for Energy Harvesting and IoT-Based Smart Alert Systems",j:"Journal of Materials Chemistry C",jShort:"J. Mater. Chem. C",if:"6.4",q:"Q1",theme:["energy","electrospin"]},
+  {n:38,y:2025,au:["K. Kukreja","S. Pratihar","P. K. Panda","<strong>P. K. S. Mural</strong>"],t:"High-Performance Piezoelectric Nanogenerator Based on PVDF/2D Layered Mo₃AlC₂ Composites for Sustainable Energy Harvesting",j:"Sensors and Actuators A: Physical",jShort:"Sens. Actuators A",if:"4.3",q:"Q1",theme:["energy"]},
+  {n:37,y:2025,au:["S. Manzoor","M. Arjumand","<strong>P. K. S. Mural</strong>","A. Yella"],t:"Thermal Quenching Resistance in Dielectrically Confined Quantum Perovskites via Dual Passivation for Temperature-Resistant White Light Emitting Diodes",j:"Small",jShort:"Small",if:"12.1",q:"Q1",theme:["energy"]},
+  {n:36,y:2025,au:["S. Shyju","A. M. Chandran","M. V. P. Kumar","<strong>P. K. S. Mural</strong>"],t:"Biodegradable PVA/PVP Blend-Based Triboelectric Nanogenerator for High-Performance Energy Harvesting and IoT-Integrated Smart Tactile Sensing",j:"ACS Applied Energy Materials",jShort:"ACS Appl. Energy Mater.",if:"5.5",q:"Q1",theme:["energy"]},
+  {n:35,y:2025,au:["A. R. Bhat","V. N. Sasi","S. Pratihar","A. M. Chandran","N. Mridha","A. Yella","<strong>P. K. S. Mural</strong>"],t:"Signal Generation Mechanisms with Isolated and Characterized Piezo/Tribo Signals for Precise Energy Harvesting Analysis",j:"ACS Applied Energy Materials",jShort:"ACS Appl. Energy Mater.",if:"5.5",q:"Q1",theme:["energy"]},
+  {n:34,y:2025,au:["M. Salesh","S. K. Sharma","N. Mridha","C. M. Nannapaneni","<strong>P. K. S. Mural</strong>","A. Yella"],t:"Multifunctional Lead-Free Halide Perovskite-Based Nanogenerator for Enhanced Energy Harvesting",j:"ACS Applied Materials &amp; Interfaces",jShort:"ACS Appl. Mater. Interfaces",if:"8.5",q:"Q1",theme:["energy"]},
+  {n:33,y:2025,au:["B. Jana","S. Pratihar","R. Haldar","A. M. Chandran","D. Borah","<strong>P. K. S. Mural</strong>","M. Shanmugam"],t:"Co(II) Complex Promoted PVDF β-Phase Crystallization: Innovations in Pressure Sensing and Energy Harvesting",j:"Journal of Materials Chemistry A",jShort:"J. Mater. Chem. A",if:"10.7",q:"Q1",theme:["energy","electrospin"]},
+  {n:32,y:2025,au:["K. Juraij","A. Niroula","Y. Greish","<strong>P. K. S. Mural</strong>","A. Nazir","M. Z. Iqbal"],t:"Sustainable, Antifouling PEF/PLA Blend Electrospun Nanofibrous Membranes",j:"Journal of Membrane Science",jShort:"J. Membr. Sci.",if:"8.4",q:"Q1",theme:["membrane","electrospin"]},
+  {n:31,y:2025,au:["S. Pratihar","A. M. Chandran","N. Mridha","A. Yella","<strong>P. K. S. Mural</strong>"],t:"Tunable Self-Poled 2D h-BN/PVDF Nanofibers",j:"ACS Applied Electronic Materials",jShort:"ACS Appl. Electron. Mater.",if:"4.5",q:"Q2",theme:["energy","electrospin"]},
+  {n:30,y:2024,au:["S. Varun","A. M. Chandran","K. P. Minhaj","V. Shaju","L. A. Varghese","<strong>P. K. S. Mural</strong>"],t:"Unveiling Predictive Insights via Machine Learning Modeling in Triboelectric Nanogenerators",j:"Chemical Engineering Journal",jShort:"Chem. Eng. J.",if:"13.3",q:"Q1",theme:["energy","ml"]},
+  {n:29,y:2024,au:["S. Shyju","A. M. Chandran","S. Varun","M. V. P. Kumar","<strong>P. K. S. Mural</strong>"],t:"Chitosan Nanocomposite-Based Triboelectric Nanogenerators",j:"ACS Applied Electronic Materials",jShort:"ACS Appl. Electron. Mater.",if:"4.3",q:"Q2",theme:["energy"]},
+  {n:28,y:2024,au:["A. R. Bhat","S. Pratihar","S. Manzoor","A. M. Chandran","A. Yella","<strong>P. K. S. Mural</strong>"],t:"Augmenting Piezoelectric Performance with ZnO Nanorods Decorated rGO",j:"ACS Applied Nano Materials",jShort:"ACS Appl. Nano Mater.",if:"5.3",q:"Q2",theme:["energy"]},
+  {n:27,y:2024,au:["S. Pratihar","A. M. Chandran","A. R. Bhat","<strong>P. K. S. Mural</strong>"],t:"Piezoelectric Nanogenerators with High Entropy Oxide Nanoparticles",j:"ACS Applied Nano Materials",jShort:"ACS Appl. Nano Mater.",if:"5.3",q:"Q2",theme:["energy"]},
+  {n:26,y:2024,au:["A. Tiwari","N. Mridha","S. K. Sharma","M. Salesh","C. M. Nannapaneni","<strong>P. K. S. Mural</strong>","A. Yella"],t:"Lead-Free Hybrid Halide Perovskite-Based Sensors",j:"Journal of Materials Chemistry A",jShort:"J. Mater. Chem. A",if:"10.7",q:"Q1",theme:["energy"]},
+  {n:25,y:2023,au:["K. Juraij","V. H. Shafeeq","A. M. Chandran","S. Vasudevan","<strong>P. K. S. Mural</strong>","A. Sujith"],t:"Flexible Polyurethane Electrospun Composite Fibers",j:"Journal of Materials Science",jShort:"J. Mater. Sci.",if:"3.5",q:"Q2",theme:["composite","electrospin"]},
+  {n:24,y:2023,au:["A. R. Bhat","R. Kumar","<strong>P. K. S. Mural</strong>"],t:"Natural Fiber Reinforced Polymer Composites: A Comprehensive Review",j:"Tribology International",jShort:"Tribol. Int.",if:"6.1",q:"Q1",theme:["composite"],review:true},
+  {n:23,y:2023,au:["A. Samal","S. Kumar","<strong>P. K. S. Mural</strong>","et al."],t:"Critical Review of Natural Fibre-Reinforced Composites",j:"Proc. IMechE Part E: J. Process Mechanical Engineering",jShort:"Proc. IMechE E",if:"2.3",q:"Q2",theme:["composite"],review:true},
+  {n:22,y:2023,au:["A. Karunanithi","T. Y. Suryawanshi","N. Redkar","<strong>P. K. S. Mural</strong>","et al."],t:"rGO Induced Enhanced Antifouling Properties",j:"Environmental Science: Water Research &amp; Technology",jShort:"Env. Sci.: Water Res. Tech.",if:"3.5",q:"Q2",theme:["membrane"]},
+  {n:21,y:2022,au:["S. Varun","et al.","<strong>P. K. S. Mural</strong>"],t:"Multifaceted PVDF Nanofibers: A Contemporary Review",j:"Journal of Fluorine Chemistry",jShort:"J. Fluorine Chem.",if:"1.7",q:"Q3",theme:["energy","electrospin"],review:true},
+  {n:20,y:2022,au:["A. M. Chandran","E. Tayal","<strong>P. K. S. Mural</strong>"],t:"PCL-Blended CA Membrane for Dairy Waste Treatment",j:"Environmental Science and Pollution Research",jShort:"Env. Sci. Pollut. Res.",if:"4.5",q:"Q2",theme:["membrane"]},
+  {n:19,y:2022,au:["A. M. Chandran","<strong>P. K. S. Mural</strong>"],t:"Surface Silanized MWCNTs Doped PVDF Nanocomposite",j:"Sustainable Energy &amp; Fuels",jShort:"Sustain. Energy Fuels",if:"5.0",q:"Q2",theme:["energy","composite"]},
+  {n:18,y:2022,au:["J. P. Varghese","A. M. Chandran","<strong>P. K. S. Mural</strong>","et al."],t:"Silane Functionalized Alumina/Epoxy Nanocomposite",j:"IEEE Transactions on Nanotechnology",jShort:"IEEE Trans. Nanotechnol.",if:"2.1",q:"Q3",theme:["composite"]},
+  {n:17,y:2021,au:["A. M. Chandran","S. Varun","et al.","<strong>P. K. S. Mural</strong>"],t:"ZnO Nanoparticles Coated with Silane for PVDF Films",j:"ACS Applied Nano Materials",jShort:"ACS Appl. Nano Mater.",if:"5.3",q:"Q2",theme:["energy"]},
+  {n:16,y:2021,au:["A. M. Chandran","S. Varun","<strong>P. K. S. Mural</strong>"],t:"Flexible Electroactive PVDF/ZnO Nanocomposite",j:"Polymer Engineering &amp; Science",jShort:"Polym. Eng. Sci.",if:"3.2",q:"Q2",theme:["energy"]},
+  {n:15,y:2021,au:["A. M. Chandran","S. Varun","<strong>P. K. S. Mural</strong>"],t:"Thermal and Electrical Transport Properties of h-BN and rGO/Epoxy",j:"Journal of Materials Science: Materials in Electronics",jShort:"J. Mater. Sci.: Mater. Electron.",if:"2.8",q:"Q2",theme:["composite"]},
+  {n:14,y:2020,au:["A. M. Chandran","S. Varun","<strong>P. K. S. Mural</strong>"],t:"Self-Poled PVDF/MWNT Flexible Nanocomposites",j:"New Journal of Chemistry",jShort:"New J. Chem.",if:"2.7",q:"Q2",theme:["energy","composite"]},
+  {n:13,y:2018,au:["<strong>P. K. S. Mural</strong>","G. Madras","S. Bose"],t:"Polymeric Membranes from Immiscible Blends",j:"Nano-Structures &amp; Nano-Objects",jShort:"Nano-Struct. Nano-Objects",if:"2.0",q:"Q3",theme:["membrane"]},
+  {n:12,y:2017,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Antibacterial Membranes with Controlled Silver Leaching",j:"ChemistrySelect",jShort:"ChemistrySelect",if:"1.9",q:"Q3",theme:["membrane"]},
+  {n:11,y:2016,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Water Permeation through Biocidal Graphene Oxide Sheets",j:"Nanoscale",jShort:"Nanoscale",if:"5.8",q:"Q1",theme:["membrane"]},
+  {n:10,y:2016,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Site-Specific Silver Decoration on PE Ionomer Membranes",j:"RSC Advances",jShort:"RSC Adv.",if:"3.9",q:"Q2",theme:["membrane"]},
+  {n:9,y:2015,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Critical Review on In Situ Reduction of Graphene Oxide",j:"RSC Advances",jShort:"RSC Adv.",if:"3.9",q:"Q2",theme:["membrane"],review:true},
+  {n:8,y:2015,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Porous Membranes with Silver Decorated rGO",j:"RSC Advances",jShort:"RSC Adv.",if:"3.9",q:"Q2",theme:["membrane"]},
+  {n:7,y:2015,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Magnetic Nanoparticles on Graphene Oxide for EMI Shielding",j:"ACS Applied Materials &amp; Interfaces",jShort:"ACS Appl. Mater. Interfaces",if:"8.3",q:"Q1",theme:["composite"]},
+  {n:6,y:2015,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Chitosan Immobilized Porous Polyolefin Membranes",j:"ACS Sustainable Chemistry &amp; Engineering",jShort:"ACS Sustain. Chem. Eng.",if:"7.1",q:"Q1",theme:["membrane"]},
+  {n:5,y:2014,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Positive Temperature Coefficient in PE/PEO Blends",j:"RSC Advances",jShort:"RSC Adv.",if:"3.9",q:"Q2",theme:["composite"]},
+  {n:4,y:2014,au:["<strong>P. K. S. Mural</strong>","et al."],t:"PE/PEO Blends Compatibilized by PE Brush on MWNTs",j:"RSC Advances",jShort:"RSC Adv.",if:"3.9",q:"Q2",theme:["composite"]},
+  {n:3,y:2014,au:["<strong>P. K. S. Mural</strong>","et al."],t:"Polyolefin Based Antibacterial Membranes from PE/PEO Blends",j:"Journal of Materials Chemistry A",jShort:"J. Mater. Chem. A",if:"10.7",q:"Q1",theme:["membrane"]},
+  {n:2,y:2013,au:["S. S. Bagali","<strong>P. K. S. Mural</strong>","et al."],t:"Optimization of Centrifugal Compressor",j:"Journal of Engineering Studies and Research",jShort:"J. Eng. Stud. Res.",if:"",q:"",theme:["composite"]},
+  {n:1,y:2011,au:["<strong>P. K. S. Mural</strong>","et al."],t:"PP/HIPS Blend Nanocomposites from E-Waste",j:"International Journal of Plastics Technology",jShort:"Int. J. Plast. Technol.",if:"",q:"",theme:["composite"]},
+];
+
+const themeLabels = {energy:"Energy Harvesting",membrane:"Membranes / Water",composite:"Composites",electrospin:"Electrospinning",ml:"ML / Informatics"};
+
+const years = [...new Set(pubs.map(p=>p.y))].sort((a,b)=>b-a);
+const yearSel = document.getElementById('filterYear');
+years.forEach(y => { const o=document.createElement('option'); o.value=y; o.textContent=y; yearSel.appendChild(o); });
+
+function renderPubs(){
+  const q=document.getElementById('pubSearch').value.toLowerCase().trim();
+  const y=document.getElementById('filterYear').value;
+  const theme=document.getElementById('filterTheme').value;
+  const quartile=document.getElementById('filterQ').value;
+  const filtered=pubs.filter(p=>{
+    if(y && p.y!=y) return false;
+    if(theme && !p.theme.includes(theme)) return false;
+    if(quartile && p.q!==quartile) return false;
+    if(q){ const hay=(p.t+' '+p.j+' '+p.au.join(' ')).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  });
+  document.getElementById('resultCount').textContent=`Showing ${filtered.length} of ${pubs.length} papers`;
+  const empty=document.getElementById('emptyState');
+  const list=document.getElementById('pubList');
+  if(filtered.length===0){list.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  const byYear={};
+  filtered.forEach(p=>{(byYear[p.y]=byYear[p.y]||[]).push(p);});
+  list.innerHTML=Object.keys(byYear).sort((a,b)=>b-a).map(yr=>{
+    const yp=byYear[yr];
+    return `<h2 class="pub-year-header">${yr} <span class="pub-year-count">${yp.length} paper${yp.length>1?'s':''}</span></h2>`+yp.map(p=>`
+      <div class="pub-entry">
+        <div class="pub-num mono">${String(p.n).padStart(2,'0')}</div>
+        <div>
+          <div class="pub-authors">${p.au.join(', ')}</div>
+          <div class="pub-title">${p.t}</div>
+          <div class="pub-journal"><em>${p.j}</em></div>
+          <div class="pub-badges">
+            ${p.q?`<span class="badge badge-${p.q.toLowerCase()}">${p.q}</span>`:''}
+            ${p.if?`<span class="badge badge-if">IF ${p.if}</span>`:''}
+            ${p.theme.map(t=>`<span class="badge badge-theme">${themeLabels[t]}</span>`).join('')}
+            ${p.review?'<span class="badge badge-theme" style="border-color:var(--rust);color:var(--rust);">Review</span>':''}
+            ${p.doi?`<a href="https://doi.org/${p.doi}" target="_blank" class="pub-doi">doi ↗</a>`:''}
+          </div>
+        </div>
+      </div>`).join('');
+  }).join('');
+}
+
+function clearFilters(){
+  ['pubSearch','filterYear','filterTheme','filterQ'].forEach(id=>document.getElementById(id).value='');
+  renderPubs();
+}
+['pubSearch','filterYear','filterTheme','filterQ'].forEach(id=>{
+  document.getElementById(id).addEventListener('input',renderPubs);
+  document.getElementById(id).addEventListener('change',renderPubs);
+});
+
+function renderReviews(){
+  document.getElementById('reviewList').innerHTML=pubs.filter(p=>p.review).sort((a,b)=>b.y-a.y).map(p=>`
+    <div class="pub-entry">
+      <div class="pub-num mono">${String(p.n).padStart(2,'0')}</div>
+      <div>
+        <div class="pub-authors">${p.au.join(', ')}</div>
+        <div class="pub-title">${p.t}</div>
+        <div class="pub-journal"><em>${p.j}</em> · ${p.y}</div>
+        <div class="pub-badges">
+          ${p.q?`<span class="badge badge-${p.q.toLowerCase()}">${p.q}</span>`:''}
+          ${p.if?`<span class="badge badge-if">IF ${p.if}</span>`:''}
+          <span class="badge badge-theme" style="border-color:var(--rust);color:var(--rust);">Review</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+document.querySelectorAll('.pub-nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelectorAll('.pub-nav a').forEach(x=>x.classList.remove('active'));
+    a.classList.add('active');
+    const tab=a.dataset.tab;
+    document.getElementById('tab-journal').style.display=tab==='journal'?'block':'none';
+    document.getElementById('tab-books').style.display=tab==='books'?'block':'none';
+    document.getElementById('tab-review').style.display=tab==='review'?'block':'none';
+  });
+});
+
+renderPubs(); renderReviews();
+</script>
+<script src="js/site.js"></script>
+</body>
+</html>
